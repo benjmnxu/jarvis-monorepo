@@ -27,3 +27,5 @@ RUN uv sync --no-cache --link-mode=copy
 
 # Copy service code
 COPY services/notes/. .
+
+CMD ["uv", "run", "fastapi", "dev", "main.py", "--port", "8001", "--host", "0.0.0.0"]
